@@ -16,16 +16,18 @@ function createMainWindow() {
     window.webContents.openDevTools()
   }
 
-  if (isDevelopment) {
-    window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`)
-  }
-  else {
-    window.loadURL(formatUrl({
-      pathname: path.join(__dirname, 'index.html'),
-      protocol: 'file',
-      slashes: true
-    }))
-  }
+//  if (isDevelopment) {
+//    window.loadURL(`http://localhost:${process.env.ELECTRON_WEBPACK_WDS_PORT}`)
+//  }
+//  else {
+//    window.loadURL(formatUrl({
+//      pathname: path.join(__dirname, 'index.html'),
+//      protocol: 'file',
+//      slashes: true
+//    }))
+//  }
+
+  window.loadURL('https://keep.google.com/u/0/')
 
   window.on('closed', () => {
     mainWindow = null
